@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/kiwiproject/champagne-service/user_guide/environments/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Environments - Champagne</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Environments";
+        var mkdocs_page_input_path = "user_guide/environments.md";
+        var mkdocs_page_url = "/kiwiproject/champagne-service/user_guide/environments/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Champagne
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../getting_started/">Getting Started</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../hosts/">Hosts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/">Components</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../builds/">Builds</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Environments</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-an-environment">Creating an environment</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#enablingdisabling-an-environment">Enabling/Disabling an environment</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#disable-an-environment">Disable an environment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#enable-an-environment">Enable an environment</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deleting-an-environment">Deleting an environment</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tasks/">Manual Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../system_users.md">System Users</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">System Admin Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../system_admin/manage_system/">Manage System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../system_admin/tags/">Tags</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../system_admin/system_audits/">System Audits</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Champagne Admin Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../champagne_admin/users/">Users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../champagne_admin/audits/">Audits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../champagne_admin/systems/">Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../champagne_admin/errors/">Errors</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Champagne</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User Guide</li>
+      <li class="breadcrumb-item active">Environments</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="environments">Environments</h1>
+<p>The environments page lets a user manage a logical list of deployable environments for the overall system.</p>
+<p><img alt="Screenshot" src="../../img/environments.png" /></p>
+<h2 id="creating-an-environment">Creating an environment</h2>
+<ol>
+<li>Click the <img alt="add" src="../../img/add.png" width="40"/> button at the bottom of the screen</li>
+<li>
+<p>The create new environment dialog will appear</p>
+<p><img alt="New deployment environment dialog" src="../../img/create-environment.png" width="300"/></p>
+</li>
+<li>
+<p>Enter the new environment name (<strong>This is required</strong>)</p>
+</li>
+<li>Click Save to create the environment</li>
+</ol>
+<h2 id="enablingdisabling-an-environment">Enabling/Disabling an environment</h2>
+<p>Deployable environments can be enabled and disabled. This might be a better option than deleting the environment if there
+is historical data related to the environment that should be kept.</p>
+<p><strong>Heads Up!</strong> Enabling and Disabling can only be performed by administrators of the deployable system!</p>
+<h3 id="disable-an-environment">Disable an environment</h3>
+<p>To disable an environment, find the row with the environment to be disabled, click the 3 vertical dots and select Deactivate.</p>
+<p><img alt="Deactivate Environment Action" src="../../img/environment-actions-active.png" width="300"/></p>
+<h3 id="enable-an-environment">Enable an environment</h3>
+<p>To enable an environment, find the row with the environment to be enabled, click the 3 vertical dots and select Activate.</p>
+<p><img alt="Activate Environment Action" src="../../img/environment-actions-inactive.png" width="300"/></p>
+<h2 id="deleting-an-environment">Deleting an environment</h2>
+<p>Deployable environments can be deleted. Beware, however, that this will also delete all information related to that 
+deployable environment</p>
+<p><strong>Heads Up!</strong> Deleting can only be performed by administrators of the deployable system!</p>
+<p>To delete an environment, find the row with the environment to be deleted and click the 3 vertical dots and select Remove.</p>
+<p><img alt="Remove Environment Action" src="../../img/environment-actions-active.png" width="300"/></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../builds/" class="btn btn-neutral float-left" title="Builds"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tasks/" class="btn btn-neutral float-right" title="Manual Tasks">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../builds/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tasks/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
